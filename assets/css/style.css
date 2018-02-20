@@ -5,9 +5,9 @@
 }
 
 .wrapper {
-margin: 0 auto;
-display: table;
+margin: 0 5%;
 width: 100%;
+display: table;
 }
 
 .header {
@@ -90,7 +90,6 @@ width: 100%;
     max-width: 200px;
     max-height: 200px;
     padding: 30px 30px  0;
-    float: left;
 }
 
 p {
@@ -240,8 +239,12 @@ p {
 }
 
 @media (max-width: 768px) {
-    .wrapper {
-
+    .grid-container {
+        grid-template-areas:
+        'header'
+        'mainContent'
+        'sideLinks'
+        'footer'
     }
     .mainContent {
         width: 100%;
