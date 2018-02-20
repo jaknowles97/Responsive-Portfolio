@@ -1,36 +1,54 @@
 .grid-container {
     display: grid;
-    grid-template: 
-    'header header header'
-    'main main sideLinks'
-    'footer footer footer';
-    margin: 0 auto;
-                
+    grid-template-areas: 
+    'main sideLinks';
 }
 
-/*  header  */
+.body {
+    background-image: url("../images/dark-triangles.png");
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.wrapper {
+margin: 0 10%;
+}
+
 .header {
-    margin: 0;
+    margin: 0 auto;
     background-color: #755b69;
     width: 100%;
     height: fit-content;
     border-bottom: 10px solid #593F62;
 }
 
+.navLinks {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
 .titleBox {
     background-color: #593F62;
-    display: table;
+    margin-left: 10%;
+    display: inline-block;
     height: 100%;
-    width: 100%;
+}
+
+.headerTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    color: #111;
+    padding: 20px;
+    width: 300px;
+    display: inline-block;
     text-align: center;
 }
 
 .navList {
-    display: table;
+    display: inline-block;
     text-decoration: none;
     margin-left: 400px;
-    align-items: center;
-    margin: 0 auto;
 }
 
 .li {
@@ -45,14 +63,16 @@
     color: inherit;
 }
 
-/*  main box    */
+/*      main content    */
 .mainContent {
     background-color: #755b69;
     height: fit-content;
-
-    border: 5px solid #593F62;
-    max-width: 650px;
+    width: 650px;
+    margin-right: 40px;
     float: left;
+    position: relative;
+    margin-top: 30px;
+    border: 5px solid #593F62;
 }
 
 .h1Main {
@@ -74,6 +94,7 @@
     max-width: 200px;
     max-height: 200px;
     padding: 30px 30px  0;
+    float: left;
 }
 
 p {
@@ -81,18 +102,19 @@ p {
     font-size: 20px;
     line-height: 2;
     padding: 30px 30px 0;
-
+    text-align: left;
 }
 
 /*  connect with me box */
 
 .connectLinks {
+    float: left;
+    width: 270px;
     height: fit-content;
     background-color: #755b69;
     padding: 30px;
-
+    margin-top: 30px;
     border: 5px solid #593F62;
-    max-width: 270px;
 }
 
 .h1Connect {
@@ -202,9 +224,10 @@ p {
 /*  footer  */
 
 .footer {
-    
+    position: absolute;
+    top: 900px;
     width: 100%;
-    height: fit-content;
+    height: 150px;
     background-color: #755b69;
     vertical-align: bottom;
     border-top: 30px solid #593F62;
@@ -217,9 +240,5 @@ p {
     text-align: center;
     padding-top: 75px;
 
-
-}
-
-@media (max-width: 768px) {
 
 }
